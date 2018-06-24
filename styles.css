@@ -1,107 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
 html {
   height: 100%;
 }
 
 body {
-  position: relative;
   font-family: 'Roboto', 'Arial', sans-serif;
-  color: #333;
-  font-size: 16px;
-  cursor: default;
+  font-size: 18px;
+  background: linear-gradient(to bottom right, #191654, #43C6AC);
+  color: #FFF;
+  text-align: center;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-.wrapper {
-  margin: 0 auto;
-  padding: 0 50px;
-  min-width: 1060px;
-}
-
-body>header {
+header {
   position: absolute;
   width: 100%;
   top: 50px;
 }
 
-body>header .wrapper {
+header .wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 0 200px;
 }
 
-body>header .logo {
-  display: block;
-}
-
-body>header .logo img {
+.logo img {
   width: 194px;
 }
 
-body>header nav {
-  margin-top: 12px;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-body>header nav a {
-  position: relative;
-  padding: 5px;
-  color: #fff;
-  letter-spacing: 1px;
-}
-
-body>header nav a:before {
-  content: '';
-  position: absolute;
-  width: calc(100% - 10px);
-  height: 2px;
-  bottom: 0;
-  left: 5px;
-  border-color: #fff;
-  visibility: hidden;
-  /* -webkit-transform: scaleX(0);
-  -moz-transform: scaleX(0);
-  -ms-transform: scaleX(0);
-  -o-transform: scaleX(0); */
-  transform: scaleX(0);
-  /* -webkit-transition: all 0.15s ease-in-out 0s;
-  -moz-transition: all 0.15s ease-in-out 0s; */
-  transition: all 0.15s ease-in-out 0s
-}
-
-body>header nav a:hover {
-  color: #fff;
-}
-
-body>header nav a:hover:before {
-  visibility: visible;
-  transform: scaleX(1);
-}
-
-body>header nav li {
+.cool-link {
+  margin-right: 30px;
   display: inline-block;
-  margin-left: 30px;
+  font-weight: 900;
 }
 
-
-
-
-html .wpapper {
-  width: 1060px;
+.cool-link a {
+  text-decoration: none;
+  position: relative;
+  transition: 0.15s ease-in-out;
+  color: #FFF;
 }
 
-body {
-  padding: 150px 0 0 0;
-  background: #43C6AC;
-  background: -webkit-linear-gradient(to bottom right, #191654, #43C6AC);
-  background: linear-gradient(to bottom right, #191654, #43C6AC);
-  color: #fff;
-  text-align: center;
+.cool-link:hover a {
+  color: #FFF;
 }
 
-body.page-home h1 {
-  font-style: 32px;
-  font-weight: 600;
+.cool-link a::before {
+  width: 0;
+  height: 3px;
+  background: #FFF;
+  position: absolute;
+  bottom: -5px;
+  content: "";
+}
+
+.cool-link.center-to-side:hover a::before {
+  transition: 0.15s ease-in-out;
+  width: 100%;
+}
+
+.cool-link.right-to-left a::before {
+  right: 0;
+}
+
+.cool-link.center-to-side a::before {
+  left: 50%;
+  transform: translateX(-50%);
 }
