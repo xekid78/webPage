@@ -56,7 +56,7 @@ header .wrapper {
 }
 
 .cool-link.center-to-side:hover a::before {
-  transition: 0.15s ease-in-out;
+  transition: 0.1s ease-in-out;
   width: 100%;
 }
 
